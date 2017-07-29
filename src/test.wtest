@@ -1,28 +1,40 @@
-import fixture.*
 import superintendencia.*
+import seguro.*
+import vehiculo.*
+import superintendencia.*
+import siniestro.*
 
+describe "tests superintendencia" {
+    const fitito = new Vehiculo(seguroTerceros,"Soruges")
+	const bondi = new Vehiculo(seguroTodoRiesgo, "Chano")
+	const moto = new Vehiculo(seguroTerceros, "Que Dios se lo pague")
+	const choque = new Siniestro([new Danio(fitito, 20000),new Danio(bondi,500), new Danio(moto,20),new Danio("semaforo",1000),new Danio("peaton",2000)])
+	const vuelco = new Siniestro([new Danio(fitito, 1000),new Danio("calle",300)])
+	
 test "El costo total para la aseguradora del fitito es 3520" {
-	assert.equals(3520, fixture.fitito().cuantoPagaAseguradora(fixture.choque())) 
+	assert.equals(3520, fitito.cuantoPagaAseguradora(choque)) 
 }
 
 test "El costo total para la aseguradora del bondi es 23520" {
-	assert.equals(23520, fixture.bondi().cuantoPagaAseguradora(fixture.choque())) 
+	assert.equals(23520, bondi.cuantoPagaAseguradora(choque)) 
 }
 
 test "El costo total para la aseguradora de la moto es 23500" {
-	assert.equals(23500, fixture.moto().cuantoPagaAseguradora(fixture.choque())) 
+	assert.equals(23500, moto.cuantoPagaAseguradora(choque)) 
 }
 
 test "Lo que paga el fitito en un solo siniestro es 20000 " {
-	assert.equals(20000, fixture.fitito().cuantoPagaVehiculo(fixture.choque())) 
+	assert.equals(20000, fitito.cuantoPagaVehiculo(choque)) 
 }
 
 test "Lo que paga el fitito en dos siniestro es 21000 " {
-	superintendencia.agregarSiniestro(fixture.choque())
-	superintendencia.agregarSiniestro(fixture.vuelco())
-	assert.equals(21000, superintendencia.pagoTotalDelVehiculo(fixture.fitito())) 
+	superintendencia.agregarSiniestro(choque)
+	superintendencia.agregarSiniestro(vuelco)
+	assert.equals(21000, superintendencia.pagoTotalDelVehiculo(fitito)) 
 }
 
 test "Si se quiere ver cuando paga la aseguradora por un auto que no intervino en el choque" {
-	assert.throwsException({fixture.bondi().cuantoPagaVehiculo(fixture.vuelco())}) 
+	assert.throwsException({bondi.cuantoPagaVehiculo(vuelco)}) 
+}
+
 }
