@@ -1,4 +1,7 @@
 #Accidentes seguros
+ 
+[![Build Status](https://travis-ci.org/wollok/ejercicioIntegradorAccidentesSeguros.svg?branch=master)](https://travis-ci.org/wollok/ejercicioIntegradorAccidentesSeguros)
+
 ## Ejercicio Integrador
 
 ![](fitito.jpg)
