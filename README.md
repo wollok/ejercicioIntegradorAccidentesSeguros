@@ -1,7 +1,5 @@
-#Accidentes seguros
+# Accidentes seguros
  
-[![Build Status](https://travis-ci.org/wollok/ejercicioIntegradorAccidentesSeguros.svg?branch=master)](https://travis-ci.org/wollok/ejercicioIntegradorAccidentesSeguros)
-
 ## Ejercicio Integrador
 
 ![](fitito.jpg)
@@ -22,7 +20,7 @@ Un vehículo puede tener sólo una póliza, pero puede cambiarla por otra, de la
 En cualquier siniestro, con cualquier cobertura, lo que la aseguradora no cubre, lo paga el vehículo y viceversa.
 La superintendencia de seguros lleva el registro de todos los siniestros producidos en la ciudad. 
 
-###Ejemplo:
+### Ejemplo:
 
 Se produjo hace un rato un choque en la intersección de Av 25 de Mayo y Av, San Martín, en el que está involucrado un fiat 600 con un seguro contra terceros de la empresa "Soruges", un colectivo de la línea 21 con un seguro contra todo riesgo de la aseguradora "Chano"  y una moto con un seguro contra terceros de "Que Dios se lo pague". En el fitito viajaban dos personas, no hubo que lamentar víctimas fatales, y por el estado en que quedó se estima el daño en $20000. El bondi estaba lleno, pero sólo sufrió rasguños que se calculan en $500. Por su parte, la moto tuvo daños leves de $20 y su conductor no se hizo nada porque llevaba el casco puesto. En el siniestro se dañó un semáforo cuyo arreglo cuesta $1000. Un peatón que cruzaba velozmente la calle porque llegaba tarde a un examen en la facultad se salvó por centímetros de ser embestido y alegó una conmoción emocional cuyo resarcimiento se estima en $2000. 
 
@@ -36,9 +34,9 @@ Desde el punto de vista de cada vehículo, lo que paga cada uno es:
 - El fitito: paga los 20000 del costo de su propio daño.
 - El bondi: no paga nada porque el seguro paga todo
 
-Importante: Tener en cuenta que un auto puede tener diferentes siniestros y el costo del daño no tiene porqué ser el mismo siempre.
+**Importante:** Tener en cuenta que un auto puede tener diferentes siniestros y el costo del daño no tiene porqué ser el mismo siempre.
 
-###Se pide:
+### Se pide:
 
 - Definir los objetos necesarios.
 - Implementar los métodos que permitan:
